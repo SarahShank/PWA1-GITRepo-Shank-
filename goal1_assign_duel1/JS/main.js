@@ -27,9 +27,10 @@ Assignment 1 Week 1
 
     var round = 0; //variable for fight round number
 
-    // clicking the OK button will run a loop repeating the game through each round
+   
 
-    function fight(){
+    function fight(){ // clicking the OK button will run a loop repeating the game through each round
+
 
         console.log("in the fight function");// printing in the fight function to the browser console
     // a pop up that alerts the player 1 & 2 plus there health and the *START* title
@@ -42,16 +43,16 @@ Assignment 1 Week 1
             //random formula is - Math.floor(Math.random() * (max - min) + min);
 
             var minDamage1 = player1Damage *.5; //variable using a random math formula to predict the player outcome
-            var minDamage2 = player2Damage *.5;
-            var f1= Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1);
-            var f2= Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2);
+            var minDamage2 = player2Damage *.5; //variable using a random math formula to predict the player outcome
+            var f1= Math.floor(Math.random()*(player1Damage-minDamage1)+minDamage1); //random generator code
+            var f2= Math.floor(Math.random()*(player2Damage-minDamage2)+minDamage2); // random generator code
 
             //console.log(f1);
             //console.log(f2);
 
             //inflict damage on players during the rounds in the game
-            playerOneHealth-=f1;
-            playerTwoHealth-=f2;
+            playerOneHealth-=f1; // player one deducting
+            playerTwoHealth-=f2; // player two deducting
 
             //console.log(playerOneHealth);
             //console.log(playerTwoHealth);
@@ -59,14 +60,14 @@ Assignment 1 Week 1
             console.log(playerOneName+":"+playerOneHealth+""+playerTwoName+":"+playerTwoHealth);
             //variable for checking the players results as to who won the game
 
-            var results = winnerCheck();
-            console.log(results);
+            var results = winnerCheck(); // variable result equals winnerCheck
+            console.log(results); // printing to browser the results
 
             //telling the computer that if there is no winner to print on the browser
 
             if(results ==="no winner"){ // if results are exactly equal to no winner
                 round++; // adding plus 1 to each round
-                //pop up alerts player about player 1 & 2 
+                //pop up alerts player about player 1 & 2 about the status of names, health, and round number
                 alert(playerOneName+":"+playerOneHealth+" *ROUND "+round+" OVER*"+playerTwoName+":"+playerTwoHealth);
 
             }else { // if there is a winner stop the rounds and alert the players results of the game
