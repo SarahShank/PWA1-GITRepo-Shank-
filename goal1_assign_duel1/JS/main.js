@@ -2,7 +2,9 @@
  * Created by SarahShank on 12/1/14.
  */
 /* Sarah Shank
-
+12/1/2014
+Duel fight game
+Assignment 1 Week 1
  */
 
 //self- executing function
